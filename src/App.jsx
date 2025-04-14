@@ -11,7 +11,7 @@ import Jalabiya from './component/pages/NavPages/Mens/Jalabiya'
 function App() {
 
   return (
-    <div className='bg-black'>
+    <div className='bg-black overflow-hidden'>
       <Router>
       <NavBar/>
       

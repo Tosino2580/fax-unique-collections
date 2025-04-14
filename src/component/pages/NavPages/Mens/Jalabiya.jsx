@@ -79,7 +79,7 @@ const JalabiyaData = ({product})=>{
                  <motion.img
                       src={product.image}
                       alt={product.name}
-                      className={`w-100  md:w-full h-120 md:h-120 object-cover transition-transform rounded-xl duration-300 `}
+                      className={`w-100  md:w-full h-120 md:h-120 object-cover transition-transform rounded-xl duration-300 ml-3 md:ml-0`}
                       initial={{ opacity: 1 }}
                       animate={{ opacity: isHovered ? 0 : 1,}}
                       transition={{ duration: 0.5, ease: "easeInOut",  }}
@@ -88,13 +88,13 @@ const JalabiyaData = ({product})=>{
                   <motion.img
                       src={product.hoverImage}
                       alt={product.name}
-                      className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+                      className="absolute top-0 left-0 w-full h-full object-cover rounded-xl ml-3 md:ml-0"
                       initial={{ opacity: 0, scale: 1 }}
                       animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 1 }}
                       transition={{ duration: 0.9, ease: "easeInOut",   }}
                   />
     
-                  <h3 className='text-sm font-semibold  text-white px-1 bg-red-400 rounded-xl w-13 text-center relative bottom-118 left-2'>NEW</h3>
+                  <h3 className='text-sm font-semibold  text-white px-1 bg-red-400 rounded-xl w-13 text-center relative bottom-118 left-2 ml-3 md:ml-0'>NEW</h3>
     
                   <div
                       
