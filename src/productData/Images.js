@@ -1,6 +1,6 @@
 import image1 from "/src/assets/images/crop_top_2.webp"
 import image2 from "/src/assets/images/agbada_2.webp"
-import image3 from "/src/assets/images/jalabiya.webp"
+import image3 from "/src/assets/images/Jalabiya.webp"
 import image4 from "/src/assets/images/tshirt.jpg"
 import image5 from "/src/assets/images/pants.jpg"
 import image6 from "/src/assets/images/abaya.webp"
