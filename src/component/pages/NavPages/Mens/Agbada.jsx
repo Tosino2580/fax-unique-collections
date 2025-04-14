@@ -6,44 +6,8 @@ import { Link } from 'react-router-dom'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import Footer from '../../../Footer';
+import { agbadaDatas } from '../../../../productData/agbadaDatas';
 
-const agbada = [
-  {
-    id: 1,
-    name: "The Historic Ozo x NFL Agbada",
-    price: "₦1,273,800.00 NGN",
-    image: '/src/assets/images/MEN/Agbada/agbada-1.webp',
-    hoverImage: '/src/assets/images/MEN/Agbada/agbada-2.webp',
-  },
-  {
-    id: 2,
-    name: "Macallan Reserve Agbada",
-    price: "₦885,000.00 NGN",
-    image: '/src/assets/images/MEN/Agbada/agbada-3.webp',
-    hoverImage: '/src/assets/images/MEN/Agbada/agbada-4.webp',
-  },
-  {
-    id: 3,
-    name: "Onìńówọ & Olori Patched Aso-Oke Agbada",
-    price: "₦3,315,000.00 NGN",
-    image: '/src/assets/images/MEN/Agbada/agbada-5.webp',
-    hoverImage: '/src/assets/images/MEN/Agbada/agbada-6.webp',
-  },
-  {
-    id: 4,
-    name: "Turquoise Blue Agbada Kaftan and Aso Oke Pant",
-    price: "344,300.00 NGN",
-    image: '/src/assets/images/MEN/Agbada/agbada-7.webp',
-    hoverImage: '/src/assets/images/MEN/Agbada/agbada-8.webp',
-  },
-  {
-    id: 5,
-    name: "Lion King Agbada, Aso Oke Pant and Cap Set",
-    price: "₦344,300.00 NGN",
-    image: '/src/assets/images/MEN/Agbada/agbada-9.webp',
-    hoverImage: '/src/assets/images/MEN/Agbada/agbada-10.webp',
-  },
-];
 
 const AgbadaData = ({ product }) => {
 
@@ -109,7 +73,7 @@ const Agbada = () => {
       </div>
 
       <div className="grid grid-col md:grid-cols-4 gap-5 p-4 mt-25">
-        {agbada.map((product)=>(
+        {agbadaDatas.map((product)=>(
           <AgbadaData key={product.id} product={product}/>
         ))}
       </div>
