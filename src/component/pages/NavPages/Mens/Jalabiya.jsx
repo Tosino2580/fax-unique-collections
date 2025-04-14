@@ -5,66 +5,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion';
 import { FaEye, FaShoppingCart } from 'react-icons/fa';
 import Footer from '../../../Footer';
+import { JalabiyaDatas } from '../../../../productData/JalabiyaDatas';
 
-
-const jalabiya = [
-    {
-        id: 1,
-        name: "Noble Man Hand-painted Jalabiya",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-3.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-4.webp',
-      },
-    {
-        id: 2,
-        name: "Line Art Jalabiya and Cap Set",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/DSC05551-Edit.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-2.webp',
-      },
-    {
-        id: 3,
-        name: "Hand painted V-Neck Crepe Jalabiya",
-        price: "₦318,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-5.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-6.webp',
-      },
-    {
-        id: 4,
-        name: "Line Art Jalabiya",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-7.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-8.webp',
-      },
-    {
-        id: 5,
-        name: "Map of Africa Hand Painted Jalabiya",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-9.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-9.webp',
-      },
-    {
-        id: 6,
-        name: "Male Hand-Painted Jalabiya",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-10.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-11.webp',
-      },
-    {
-        id: 7,
-        name: "Benin Head Hand-Painted Jalabiya",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-12.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-12.webp',
-      },
-    {
-        id: 8,
-        name: "Line Art White Jalabiya and Cap Set",
-        price: "₦255,000.00 NGN",
-        image: '/src/assets/images/MEN/Jalabiya/Jalabiya-13.webp',
-        hoverImage: '/src/assets/images/MEN/Jalabiya/Jalabiya-14.webp',
-      },
-];
 
 const JalabiyaData = ({product})=>{
      const [isHovered, setIsHovered] = useState(false);
@@ -128,7 +70,7 @@ const Jalabiya = () => {
       </div>
 
       <div className="grid grid-col md:grid-cols-4 gap-5 p-4 mt-25">
-        {jalabiya.map((product)=>(
+        {JalabiyaDatas.map((product)=>(
             <JalabiyaData key={product.id} product={product}/>
         ))}
       </div>
