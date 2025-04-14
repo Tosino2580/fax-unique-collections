@@ -64,6 +64,7 @@ const Jalabiya = () => {
     <div className='bg-black mt-23 z-10 pt-10'>
       <div className='space-y-7'>
         <h1 className='text-white text-5xl text-center '>Jalabiya</h1>
+        
         <div className='flex items-center justify-center gap-5'>
           <Link to={'/'} className='text-white'>Home</Link> <FaChevronRight className='text-white w-2' /> <span className='text-white'>Jalabiya</span>
         </div>

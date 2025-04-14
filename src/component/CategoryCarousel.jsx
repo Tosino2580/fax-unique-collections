@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { images } from "../productData/Images";
 
 const CategoryCarousel = () => {
-    const images = [
-        { src: "/src/assets/images/crop_top_2.webp", link: "/crop-tops", title: "Crop Tops" },
-        { src: "/src/assets/images/agbada_2.webp", link: "/agbada", title: "Agbada" },
-        { src: "/src/assets/images/jalabiya.webp", link: "/jalabiya", title: "Jalabiya" },
-        { src: "/src/assets/images/tshirt.jpg", link: "/shirts", title: "Shirts" },
-        { src: "/src/assets/images/pants.jpg", link: "/trousers", title: "Trousers" },
-        { src: "/src/assets/images/abaya.webp", link: "/abaya", title: "Abaya" },
-        { src: "/src/assets/images/kaftan.webp", link: "/kaftan", title: "Kaftan" }
-    ];
+    
 
     const duplicatedImages = [...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images];
 
