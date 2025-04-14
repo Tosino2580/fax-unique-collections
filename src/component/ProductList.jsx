@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className='md:px-5 '>
+        <div className='md:px-5'>
             <div
                 className="relative group w-90 md:w-84   rounded-lg  shadow-lg"
                 onMouseEnter={() => setIsHovered(true)}

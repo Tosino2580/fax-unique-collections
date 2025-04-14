@@ -9,7 +9,7 @@ import Footer from '../Footer'
 
 const Home = () => {
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden font-["Crimson+Pro"]'>
      <Section/>
      <Arrival/>
      <ProductList/>
