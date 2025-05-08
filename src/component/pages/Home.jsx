@@ -5,7 +5,6 @@ import ProductList from '../ProductList'
 import Button from '../../Button'
 import Story from '../Story'
 import CategoryCarousel from '../CategoryCarousel'
-import Footer from '../Footer'
 
 const Home = () => {
   return (
@@ -16,7 +15,7 @@ const Home = () => {
      <Button/>
      <Story/>
      <CategoryCarousel/>
-     <Footer/>
+     
     </div>
   )
 }
