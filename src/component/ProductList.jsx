@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ProductData } from '../productData/ProductData'
 import { FaEye, FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 
@@ -48,9 +49,10 @@ const ProductCard = ({ product }) => {
                 </div>
             </div>
 
-            <div className=" bg-black text-white">
-                <h3 className="font-semibold uppercase">{product.name}</h3>
+            <div className=" bg-black text-white ml-4 md:ml-0">
+                <h3 className="text-sm md:text-lg font-semibold uppercase">{product.name}</h3>
                 <p className="text-yellow-400">{product.price}</p>
+                <Link  to={`/product/${product.id}`}></Link>
             </div>
         </div>
     )
