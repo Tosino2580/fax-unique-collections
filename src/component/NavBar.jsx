@@ -9,10 +9,12 @@ import { FaSearch, FaRegUser, FaBars, FaTimes, } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
 import { FaArrowDown } from 'react-icons/fa'
+import { useCart } from '../context/CartContext.jsx'
 
 
 
 const NavBar = () => {
+    const { cartItems, setShowCart } = useCart();
     const [menuOpen, setMenuOpen] = useState(false);
     const [subMenuOpen, setSubMenuOpen] = useState(null);
     const navigate = useNavigate();
@@ -53,10 +55,10 @@ const NavBar = () => {
                 <DropdownMen />
                 <DropdownWomen />
                 <a href="/kids" className='text-white group relative w-fit'>Kids
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 <a href="/collections" className='text-white ml-4 group relative w-fit'>Collections
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
             </div>
             <div>
@@ -92,13 +94,22 @@ const NavBar = () => {
                 <div className='flex items-center   space-x-8'>
                     <FaSearch className='text-white text-xl' />
                     <FaRegUser className='hidden md:flex text-white text-xl' />
-                    <MdOutlineShoppingBag className='text-white text-xl' />
+                    <div className="relative cursor-pointer"  onClick={() => setShowCart(true)}>
+                        <MdOutlineShoppingBag className="text-white text-xl" />
+                        {cartItems.length > 0 && (
+                            <span className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                                {cartItems.length}
+                            </span>
+                        )}
+
+
+                    </div>
                 </div>
             </div>
 
             {menuOpen && (
                 <motion.div
-                ref={menuRef}
+                    ref={menuRef}
                     initial={{ x: "-100%" }}
                     animate={{ x: 0 }}
                     exit={{ x: "-100%" }}
@@ -167,7 +178,7 @@ const NavBar = () => {
 
             {subMenuOpen && (
                 <motion.div
-                ref={subMenuRef}
+                    ref={subMenuRef}
                     initial={{ x: "100%" }}
                     animate={{ x: 0 }}
                     exit={{ x: "100%" }}

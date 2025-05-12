@@ -58,7 +58,7 @@ const KaftanDatas = ({ product }) => {
 
       <div className=" bg-black text-white ml-4 md:ml-0">
         <h3 className="text-sm md:text-lg font-semibold uppercase">{product.name}</h3>
-        <p className="text-yellow-400">₦{product.price.toLocaleString('en-NG')}</p>
+        <p className="text-yellow-400 font-[cinzel] font-bold">₦{product.price.toLocaleString('en-NG')}</p>
 
       </div>
     </div>
