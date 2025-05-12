@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useCart } from '../context/CartContext';
 import { FaTrashAlt } from 'react-icons/fa';
 
@@ -7,8 +7,25 @@ const CartDrawer = () => {
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
+  const cartRef = useRef(null);
+
+  useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (
+          cartRef.current && !cartRef.current.contains(event.target)) {
+          setShowCart(false);
+      }
+      }
+      document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+  },[cartRef, setShowCart])
+
   return (
-    <div className={`fixed top-0 right-0 h-full w-[350px] bg-black text-white z-50 transition-transform duration-500 ${showCart ? 'translate-x-0' : 'translate-x-full'}`}>
+    <div 
+    ref={cartRef}
+    className={`fixed top-0 right-0 h-full w-[350px] bg-black text-white z-50 transition-transform duration-500 ${showCart ? 'translate-x-0' : 'translate-x-full'}`}>
       <div className="p-5 h-full flex flex-col justify-between">
         {/* Header */}
         <div>

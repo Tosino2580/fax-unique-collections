@@ -2,12 +2,12 @@ import React, { useState, useRef } from 'react';
 import toast from 'react-hot-toast';
 import { useParams, Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
-import { JalabiyaDatas } from '../productData/JalabiyaDatas';
+import { ProductData } from '../productData/ProductData';
 import { useCart } from '../context/CartContext';
 
-function JalabiyaDetails() {
+function ProductDetails() {
   const { id } = useParams();
-  const product = JalabiyaDatas.find(item => item.id === id);
+  const product = ProductData.find(item => item.id === id);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState('');
@@ -65,13 +65,6 @@ function JalabiyaDetails() {
 
   return (
     <div className="bg-black text-white min-h-screen py-10 px-4 md:px-10 font-[Raleway]">
-      <div className='flex items-center justify-center gap-2 md:gap-5 mt-23'>
-              <Link to={'/'} className='text-sm md:text-lg text-white'>Home</Link>
-              <FaChevronRight className='text-white w-2' />
-              <Link to={'/jalabiya'} className='text-white text-sm md:text-lg'>Jalabiya</Link>
-              <FaChevronRight className='text-white w-2' />
-              <span className='text-sm'>{product.name}</span>
-            </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 mt-23">
         {/* Left section - Images */}
         <div className="flex gap-4">
@@ -198,4 +191,4 @@ function JalabiyaDetails() {
   );
 }
 
-export default JalabiyaDetails;
+export default ProductDetails;
